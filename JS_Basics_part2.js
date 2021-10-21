@@ -9,6 +9,7 @@ function symbol_in_string(str, symb) {
 console.log(symbol_in_string("serghjk", "r"));
 console.log(symbol_in_string("serghjk", "a"));
 
+
 //Write a JavaScript function to check whether a string is blank or not (string with spaces should be also blank).
 function is_blank(text) {
   let new_text = text.replace(/ /g, "");
@@ -22,6 +23,7 @@ function is_blank(text) {
 console.log(is_blank("as vf 123"));
 console.log(is_blank("   "));
 
+
 //Write a JavaScript function to convert a string in abbreviated form. console.log(abbrev (“Name Surname")) – should be “N.S.” (should convert lower case names to upper)
 const convert_to_abbrev = function (meaning) {
   let abbreviated = "3. ";
@@ -33,10 +35,11 @@ const convert_to_abbrev = function (meaning) {
 };
 console.log(convert_to_abbrev("What Do You Mean By That"));
 
+
 //Write a JavaScript function that accept two integers and display the larger
-const larger = (a, b) =>
-  a > b ? `4. ${a} larger than ${b}` : `4. ${b} larger than ${a}`;
+const larger = (a, b) => a > b ? `4. ${a} larger than ${b}` : `4. ${b} larger than ${a}`;
 console.log(larger(123, 321));
+
 
 //Write a JavaScript function with conditional statement to sort three numbers
 function sort_three_number(a, b, c) {
