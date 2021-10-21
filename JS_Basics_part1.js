@@ -22,7 +22,7 @@ const checker = given_integer > 100;
 // Write a JS program to find if the first number is larger from the two given positive integers
 const first_number = 123;
 const second_number = 10;
-const find_larger = first_name > second_number;
+const find_larger = first_number > second_number;
 
 // Write a JS program to check two given numbers and print true if one of the number is 50 or if their sum is 50
 const given_number1 = 500;
@@ -37,3 +37,8 @@ console.log(
 const given_positive_number = 123;
 const check1 = given_positive_number % 3 == 0;
 const check2 = given_positive_number % 7 == 0;
+console.log(
+  `Given number ${given_positive_number} is${
+    check1 === true ? "" : " not"
+  } a multiple of 3 and is${check2 === true ? "" : " not"} a mulpiple of 7`
+);
