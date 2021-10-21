@@ -27,7 +27,7 @@ const convert_to_abbrev = function (meaning) {
   let abbreviated = "3. ";
   const arr = meaning.split(" ");
   for (let i = 0; i < arr.length; i++) {
-    abbreviated += arr[i][0].toUpperCase() + ".";
+    abbreviated = abbreviated.concat(arr[i][0].toUpperCase(), ".");
   }
   return abbreviated;
 };
