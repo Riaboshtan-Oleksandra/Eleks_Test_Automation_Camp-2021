@@ -38,7 +38,7 @@ console.log(convert_to_abbrev("What Do You Mean By That"));
 
 //Write a JavaScript function that accept two integers and display the larger
 const larger = (a, b) => a > b ? `4. ${a} larger than ${b}` : `4. ${b} larger than ${a}`;
-console.log(larger(123, 321));
+console.log(larger(13, 321));
 
 
 //Write a JavaScript function with conditional statement to sort three numbers
