@@ -1,9 +1,19 @@
 //Write a JavaScript function to get the last element of an array
-const last_element = (arr) => arr.length == 0 ? "array is empty" : arr[arr.length - 1];
+const last_element = (arr) =>
+  arr.length == 0 ? "array is empty" : arr[arr.length - 1];
 console.log(`Last element of an array = ${last_element([44, 2, 17, 9])}`);
 
 //Write a simple JavaScript program to join all elements of the following array into a string
-const array = [ "This", "string", "is", "formed", "using", "join method to concatenate", "array's", "elements"];
+const array = [
+  "This",
+  "string",
+  "is",
+  "formed",
+  "using",
+  "join method to concatenate",
+  "array's",
+  "elements",
+];
 const str_from_array = array.join(" ");
 console.log(str_from_array);
 
@@ -19,7 +29,9 @@ const rectangle = {
   },
 };
 console.log(
-  `For rectangle with parameters: width = ${rectangle.width} and height = ${rectangle.height} calculated Perimeter = ${rectangle.getPerimeter()} and Area = ${rectangle.getArea()}`
+  `For rectangle with parameters: width = ${rectangle.width} and height = ${
+    rectangle.height
+  } calculated Perimeter = ${rectangle.getPerimeter()} and Area = ${rectangle.getArea()}`
 );
 
 //There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays and save them to third array
@@ -49,6 +61,7 @@ function sum_two_arrays(arr1, arr2) {
 }
 
 console.log(sum_two_arrays(ar1, ar2));
+
 //---------------------------------------
 // old version
 
