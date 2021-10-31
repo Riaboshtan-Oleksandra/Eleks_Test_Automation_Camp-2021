@@ -36,16 +36,40 @@ console.log(
 
 //There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays and save them to third array
 
-const arr1 = [11, 22, 33];
-const arr2 = [44, 55, 66];
-const sum_arr = [];
-if (arr1.length === arr2.length) {
-  for (let i = 0; i < arr1.length; i++) {
-    sum_arr.push(arr1[i] + arr2[i]);
+const ar1 = [11, 22, 33];
+const ar2 = [44, 55, 66, 4, 5, 7, 3];
+const sum_arrs = [];
+
+function sum_two_arrays(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    const dif = arr1.length - arr2.length;
+    if (dif < 0) {
+      for (let i = 0; i < Math.abs(dif); i++) {
+        arr1.push(0);
+      }
+    } else {
+      for (let i = 0; i < Math.abs(dif); i++) {
+        arr2.push(0);
+      }
+    }
   }
-} else {
-  throw new Error(
-    "Arrays should have the same length, otherwise sum calculation is not possible"
-  );
+
+  for (let i = 0; i < arr1.length; i++) {
+    sum_arrs.push(arr1[i] + arr2[i]);
+  }
+  return sum_arrs;
 }
-console.log(sum_arr);
+
+console.log(sum_two_arrays(ar1, ar2));
+//---------------------------------------
+// old version
+
+// if (arr1.length === arr2.length) {
+//   for (let i = 0; i < arr1.length; i++) {
+//     sum_arr.push(arr1[i] + arr2[i]);
+//   }
+// } else {
+//   throw new Error(
+//     "Arrays should have the same length, otherwise sum calculation is not possible"
+//   );
+// }
