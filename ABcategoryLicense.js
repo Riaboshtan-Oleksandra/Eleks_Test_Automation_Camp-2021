@@ -37,11 +37,7 @@ export default class ABcategoryLicense extends Urban_Transport {
   getABdriversLicense() {
     super.getDriversLicense();
     if (this.age > 18)
-      console.log(
-        `${this.name} gets '${this.#numberPlate.join(
-          " "
-        )}' number plate for his/her ${this.type}`
-      );
+      console.log(`${this.name} gets '${this.#numberPlate.join(" ")}' number plate for the ${this.type}`);
   }
 }
 
