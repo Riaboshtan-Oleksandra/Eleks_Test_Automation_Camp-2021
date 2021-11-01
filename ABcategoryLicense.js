@@ -1,6 +1,7 @@
 import Urban_Transport from "./Urban_Transport.js";
 
-class ABcategoryLicense extends Urban_Transport {
+export default class ABcategoryLicense extends Urban_Transport {
+  #numberPlate;
   constructor(
     abOwnerName,
     abOwnerAge,
@@ -10,6 +11,7 @@ class ABcategoryLicense extends Urban_Transport {
   ) {
     super(abOwnerName, abOwnerAge, abVehicleType, abFuelType);
     this.wheelsNumber = abWheelsNumber;
+    this.#numberPlate = ["BC", 3030, "AK"];
   }
 
   description() {
@@ -31,6 +33,19 @@ class ABcategoryLicense extends Urban_Transport {
       );
     }
   }
+
+  #getABdriversLicense() {
+    super.getDriversLicense();
+    if (this.age > 18)
+      console.log(
+        `${this.name} gets '${this.#numberPlate.join(
+          " "
+        )}' number plate for his/her ${this.type}`
+      );
+  }
 }
 
-export default ABcategoryLicense;
+// const honda = new ABcategoryLicense("Sasha", 33, "car", "gasoline", 4);
+// honda.getDriversLicense();
+// honda.getABdriversLicense();
+//console.log(honda.numberPlate);
