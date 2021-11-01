@@ -34,7 +34,7 @@ export default class ABcategoryLicense extends Urban_Transport {
     }
   }
 
-  #getABdriversLicense() {
+  getABdriversLicense() {
     super.getDriversLicense();
     if (this.age > 18)
       console.log(
