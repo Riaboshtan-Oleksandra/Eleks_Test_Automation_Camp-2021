@@ -14,7 +14,7 @@ console.log("-------------------------");
 
 let bmw = new ABcategoryLicense("Vasyl", 31, "car", "gas", 4);
 bmw.description();
-bmw.getDriversLicense();
+bmw.getABdriversLicense();
 
 console.log("-------------------------");
 
