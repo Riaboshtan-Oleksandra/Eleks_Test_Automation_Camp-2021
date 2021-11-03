@@ -7,23 +7,23 @@ Vehicle.rules();
 
 console.log("-------------------------");
 
-WithoutLicense.description();
+WithoutLicense.displayInfo();
 WithoutLicense.getDriversLicense();
 
 console.log("-------------------------");
 
 let bmw = new Car_ABLicense("Vasyl", 31, "car", "gas", 4);
-bmw.description();
+bmw.displayInfo();
 bmw.getABdriversLicense();
 
 console.log("-------------------------");
 
 let nc = new Truck_CDLicense("Volodymyr", 18, "truck", "gasoline", 4);
-nc.description();
+nc.displayInfo();
 nc.getDriversLicense();
 
 console.log("-------------------------");
 
 let schoolBus = new Truck_CDLicense("Nadiia", 40, "bus", "electic", 4);
-schoolBus.description();
+schoolBus.displayInfo();
 schoolBus.getDriversLicense();

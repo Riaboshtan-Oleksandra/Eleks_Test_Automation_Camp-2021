@@ -12,7 +12,7 @@ export default class Truck_CDLicense extends Vehicle {
     this.wheelsNumber = cdWheelsNumber;
   }
 
-  description() {
+  displayInfo() {
     if (this.type === "truck") {
       console.log(
         `${this.type.charAt(0).toUpperCase() + this.type.slice(1)} - is a ${

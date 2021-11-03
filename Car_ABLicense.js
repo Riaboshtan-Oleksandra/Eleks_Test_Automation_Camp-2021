@@ -15,7 +15,7 @@ export default class Car_ABLicense extends Vehicle {
     this.#model = "BMW";
   }
 
-  description() {
+  displayInfo() {
     if (this.type == "car") {
       console.log(
         `${this.type.charAt(0).toUpperCase() + this.type.slice(1)} - is a ${
