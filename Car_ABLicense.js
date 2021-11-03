@@ -1,7 +1,8 @@
-import Urban_Transport from "./Urban_Transport.js";
+import Vehicle from "./Vehicle.js";
 
-export default class ABcategoryLicense extends Urban_Transport {
-  #numberPlate;
+export default class Car_ABLicense extends Vehicle {
+  #model;
+  #year = 2015;
   constructor(
     abOwnerName,
     abOwnerAge,
@@ -11,7 +12,7 @@ export default class ABcategoryLicense extends Urban_Transport {
   ) {
     super(abOwnerName, abOwnerAge, abVehicleType, abFuelType);
     this.wheelsNumber = abWheelsNumber;
-    this.#numberPlate = ["BC", 3030, "AK"];
+    this.#model = "BMW";
   }
 
   description() {
@@ -23,25 +24,21 @@ export default class ABcategoryLicense extends Urban_Transport {
           this.fuel
         } powered urban transport. Mostly it is used for transportation of one-to-five people or light-weighted baggage.`
       );
-    } else if (this.type == "motorcycle") {
-      console.log(
-        `${this.type.charAt(0).toUpperCase() + this.type.slice(1)} - is a ${
-          this.wheelsNumber
-        }-wheeled, ${
-          this.fuel
-        } powered urban transport. It suits a range of different purposes: long-distance travel, commuting, cruising, sport (including racing), and off-road riding.`
-      );
     }
   }
 
   getABdriversLicense() {
     super.getDriversLicense();
     if (this.age > 18)
-      console.log(`${this.name} gets '${this.#numberPlate.join(" ")}' number plate for the ${this.type}`);
+      console.log(
+        `${this.name} will buy ${this.#model} of ${
+          this.#year
+        } after getting driver's license`
+      );
   }
 }
 
 // const honda = new ABcategoryLicense("Sasha", 33, "car", "gasoline", 4);
 // honda.getDriversLicense();
 // honda.getABdriversLicense();
-//console.log(honda.numberPlate);
+//console.log(honda.year);

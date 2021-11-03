@@ -1,6 +1,6 @@
-import Urban_Transport from "./Urban_Transport.js";
+import Vehicle from "./Vehicle.js";
 
-export default class CDcategoryLicense extends Urban_Transport {
+export default class Truck_CDLicense extends Vehicle {
   constructor(
     cdOwnerName,
     cdOwnerAge,
@@ -13,9 +13,13 @@ export default class CDcategoryLicense extends Urban_Transport {
   }
 
   description() {
-    if (this.type === "tram") {
+    if (this.type === "truck") {
       console.log(
-        `A tram is a train that runs on tramway track on public urban streets. It uses electrical power to transport large aount of passangers.`
+        `${this.type.charAt(0).toUpperCase() + this.type.slice(1)} - is a ${
+          this.wheelsNumber
+        }-wheeled, ${
+          this.fuel
+        } powered vehicle. Mostly it is used to transport cargo, carry specialized payloads, or perform other utilitarian work.`
       );
     } else {
       console.log(

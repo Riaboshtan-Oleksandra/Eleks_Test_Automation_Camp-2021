@@ -1,6 +1,6 @@
-import Urban_Transport from "./Urban_Transport.js";
+import Vehicle from "./Vehicle.js";
 
-class WithoutLicense extends Urban_Transport {
+class WithoutLicense extends Vehicle {
   constructor(ownerName, ownerAge, vehicleType, fuelType, wheelsNumber) {
     super(ownerName, ownerAge, vehicleType, fuelType);
     this.wheelsNumber = wheelsNumber;

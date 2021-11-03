@@ -1,4 +1,4 @@
-export default class Urban_Transport {
+export default class Vehicle {
   constructor(ownerName, ownerAge, vehicleType, fuelType) {
     this.name = ownerName;
     this.age = ownerAge;
@@ -9,7 +9,7 @@ export default class Urban_Transport {
   static rules() {
     //(not real data)
     console.log(
-      "To obtaine driver's license to operate an urban transport person must reach a certain age: \n A-B category (motorcycle, car) - 18 years old. \n C-D category (bus, tram) - 21 years old."
+      "To obtaine driver's license the person must reach a certain age: \n A-B category (car) - 18 years old. \n C-D category (bus, truck) - 21 years old."
     );
   }
 
@@ -30,7 +30,7 @@ export default class Urban_Transport {
     }
 
     // A-B category
-    if (this.type === "car" || this.type === "motorcycle") {
+    if (this.type === "car") {
       if (this.age > 18) {
         console.log(
           `${this.name} can get a driver license to operate a ${this.type}`
@@ -46,7 +46,7 @@ export default class Urban_Transport {
     }
 
     // C-D category
-    if (this.type === "bus" || this.type === "tram") {
+    if (this.type === "bus" || this.type === "truck") {
       if (this.age > 21) {
         console.log(
           `${this.name} can get a driver license to operate a ${this.type}`

@@ -1,9 +1,9 @@
-import Urban_Transport from "./Urban_Transport.js";
+import Vehicle from "./Vehicle.js";
 import WithoutLicense from "./WithoutLicense.js";
-import ABcategoryLicense from "./ABcategoryLicense.js";
-import CDcategoryLicense from "./cdCategoryLicense.js";
+import Car_ABLicense from "./Car_ABLicense.js";
+import Truck_CDLicense from "./Truck_CDLicense.js";
 
-Urban_Transport.rules();
+Vehicle.rules();
 
 console.log("-------------------------");
 
@@ -12,24 +12,18 @@ WithoutLicense.getDriversLicense();
 
 console.log("-------------------------");
 
-let bmw = new ABcategoryLicense("Vasyl", 31, "car", "gas", 4);
+let bmw = new Car_ABLicense("Vasyl", 31, "car", "gas", 4);
 bmw.description();
 bmw.getABdriversLicense();
 
 console.log("-------------------------");
 
-let harley = new ABcategoryLicense("Oleg", 17, "motorcycle", "gasoline", 2);
-harley.description();
-harley.getDriversLicense();
+let nc = new Truck_CDLicense("Volodymyr", 18, "truck", "gasoline", 4);
+nc.description();
+nc.getDriversLicense();
 
 console.log("-------------------------");
 
-let schoolBus = new CDcategoryLicense("Nadiia", 40, "bus", "gasoline", 4);
+let schoolBus = new Truck_CDLicense("Nadiia", 40, "bus", "electic", 4);
 schoolBus.description();
 schoolBus.getDriversLicense();
-
-console.log("-------------------------");
-
-let electron = new CDcategoryLicense("Volodymyr", 18, "tram", "electic", 0);
-electron.description();
-electron.getDriversLicense();
