@@ -36,11 +36,3 @@ async function promiseFromFirstF() {
 }
 
 promiseFromFirstF();
-
-// first("gtyhuj")
-//   .then((result) => {
-//     console.log(result + " from then");
-//   })
-//   .catch((result) => {
-//     console.log(result + " from catch");
-//   });
