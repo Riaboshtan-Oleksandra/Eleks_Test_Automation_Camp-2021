@@ -4,32 +4,31 @@
 //3.If data is an even number, return a promise rejected 2 seconds later and give "even" (in a string
 //4.Create a second function (which takes argument "result") which should be executed after the first function is done and print the final message like `Your number is ${result}` ONLY for cases when the first function doesn't return " error“
 
-function first(data, promiseResolve, promiseReject) {
-  if (typeof data !== "number") {
-    promiseReject("error");
-  } else if (data % 2 !== 0) {
-    setTimeout(() => {
-      promiseResolve("odd");
-    }, 1000);
-  } else if (data % 2 === 0) {
-    setTimeout(() => {
-      promiseReject("even");
-    }, 2000);
-  }
+function first(data) {
+  return new Promise((res, rej) => {
+    if (typeof data !== "number") {
+      rej("error");
+    } else if (data % 2 !== 0) {
+      setTimeout(() => {
+        res("odd");
+      }, 1000);
+    } else if (data % 2 === 0) {
+      setTimeout(() => {
+        rej("even");
+      }, 2000);
+    }
+  });
 }
 
 function second(result) {
   return `Your number is ${result}`;
 }
 
-new Promise((res, rej) => {
-  first(222, res, rej);
-})
-  .then((result) => {
-    //console.log(result);
-    console.log(second(result));
+const checkNumber = first(221);
+checkNumber
+  .then((answer) => {
+    console.log(second(answer));
   })
-  .catch((result) => {
-    //console.log(result); if(result === "even"){console.log(second(result))};
-    console.log(result === "even" ? second(result) : result);
+  .catch((answer) => {
+    console.log(answer === "even" ? second(answer) : answer);
   });
