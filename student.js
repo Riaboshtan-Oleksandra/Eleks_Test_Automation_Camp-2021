@@ -2,9 +2,9 @@
 
 //import
 import Randomstring from "randomstring";
-import Fs, { fstat } from "fs";
+import Fs from "fs";
 const fileName = "studentResults.txt";
-//let fs = require("fs");
+
 //capitalize first letter
 Object.defineProperty(String.prototype, "capital", {
   value: function () {
@@ -12,6 +12,7 @@ Object.defineProperty(String.prototype, "capital", {
   },
 });
 
+// Steps
 // 1. Create student object and set ‘name’, ‘surname’ and ‘rate: random
 // 2. Use JSON.stringify() method to make student a JSON string and write it into file (not existed)
 // 3. Read previous string from file and convert to object
