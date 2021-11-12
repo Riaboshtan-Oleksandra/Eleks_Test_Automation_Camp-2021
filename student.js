@@ -29,19 +29,22 @@ const student = {
   rate: Math.floor(Math.random() * 100) + 1,
 };
 
-let newStudent = JSON.stringify(student);
-console.log("first data " + newStudent);
-
-Fs.writeFile(fileName, newStudent, (error) => {
+Fs.writeFile(fileName, JSON.stringify(student), (error) => {
   if (error) throw error;
 });
 
-let studentFromFile;
-Fs.readFile(fileName, (error, data) => {
+Fs.readFile(fileName, "utf8", (error, data) => {
   if (error) {
     throw error;
   } else {
-    studentFromFile = data.toString();
-    console.log("data from file: " + studentFromFile);
+    let studentFromFile = JSON.parse(data);
+    if (studentFromFile.rate > 70) {
+      studentFromFile.result = "pass";
+    } else {
+      studentFromFile.result = "fail";
+    }
+    Fs.appendFile(fileName, "\n" + JSON.stringify(studentFromFile), (error) => {
+      if (error) throw error;
+    });
   }
 });

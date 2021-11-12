@@ -1,1 +1,2 @@
-{"name":"Bdx","surname":"Ugezznx","rate":11}
+{"name":"Z","surname":"Stfarajatjypxgtm","rate":53}
+{"name":"Z","surname":"Stfarajatjypxgtm","rate":53,"result":"fail"}
