@@ -8,14 +8,14 @@ describe("Calculator_positive", function () {
   });
 
   it("Substraction", function () {
-    assert.equal(calculator(-3, 0.4, "-"), -2.6);
+    assert.equal(calculator(-3, 0.4, "-"), -3.4);
   });
 
   it("Multiplication", function () {
     assert.equal(calculator(3, 4, "*"), 12);
   });
 
-  it("Division", function () {
+  it("Division_bad", function () {
     assert.equal(calculator(33, 7, "/"), 4.71);
   });
 
