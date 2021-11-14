@@ -6,7 +6,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "chance": "^1.1.8",
     "randomstring": "^1.2.1"
   },
   "scripts": {},
